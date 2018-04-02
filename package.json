@@ -1,0 +1,23 @@
+{
+  "name": "flamingo-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "migrate:up": "node migrations up",
+    "migrate:down": "node migrations down"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "debug": "~2.2.0",
+    "express": "^4.16.3",
+    "morgan": "~1.6.1",
+    "pg": "^7.4.1"
+  }
+}
