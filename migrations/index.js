@@ -31,12 +31,16 @@ const migrations = [
             Description varchar(255)
           );
           CREATE TABLE animals (
-            ID int,
-            Name varchar(255),
+            ID SERIAL PRIMARY KEY,
+            Name varchar(255) NOT NULL,
             Color varchar(255),
             Food varchar(255),
             Size varchar(255)
           );
+          INSERT INTO animals (Name, Food, Color, Size)
+          VALUES ('Goat', 'Cardboard', 'Grey', 'Medium'),
+                 ('Cat', 'Milk', 'Black', 'Small'),
+                 ('Whale', 'Krill', 'Blue', 'Large');
         `
       ),
     down: () =>
